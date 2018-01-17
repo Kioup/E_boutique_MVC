@@ -85,6 +85,11 @@ header div a {
     font-size: 1.1em;
 }
 
+header div a:hover {
+    color: #184177;
+    background-color: white;
+}
+
 div {
     padding: 10px 0;
 }
@@ -113,6 +118,10 @@ aside {
 aside .carte {
     background-color: #184177;
     padding: 30px;
+}
+
+aside .carte:hover {
+    background-color: #053566;
 }
 
 aside .carte h2 {
