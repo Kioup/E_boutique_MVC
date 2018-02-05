@@ -3,7 +3,7 @@
 foreach($prod as $produit){
 ?>
 
-<a href="index.php?ctrl=product&action=displayOne(<?=$produit->getId();?>)">
+<a href="index.php?ctrl=product&action=displayOne&id=<?=$produit->getId();?>">
 <div class="produit">
 	<img src="./Images/<?=$produit->getImage_url();?>" alt="">
 	<div>

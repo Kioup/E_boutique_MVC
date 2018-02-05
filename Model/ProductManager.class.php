@@ -7,7 +7,7 @@ class ProductManager {
     }
     
     public function findOne($id){
-        $req = $this->db->prepare("SELECT * FROM Product WHERE id_product = ?");
+        $req = $this->db->prepare("SELECT * FROM Product WHERE id = ?");
         $req->setFetchMode( PDO::FETCH_CLASS, 'Product');
         $req->execute(array($id));
         return $req->fetch(PDO::FETCH_CLASS);

@@ -18,10 +18,16 @@ else {
     $action = 'display';
 }
 
+$id = !empty($_GET['id']) ? $_GET['id'] : false;
+
 require_once('./Controller/' . $ctrl  . 'Controller.class.php');
 
 $ctrl = $ctrl . 'Controller';
 $controller = new $ctrl($db);
-$controller->$action();
+if ($id) {
+    $controller->$action($id);
+} else {
+    $controller->$action();
+}
 
 ?>
