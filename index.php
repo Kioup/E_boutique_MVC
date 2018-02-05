@@ -14,8 +14,8 @@ if (
 }
 else {
 
-    $ctrl = 'user';
-    $action = 'main';
+    $ctrl = 'product';
+    $action = 'display';
 }
 
 require_once('./Controller/' . $ctrl  . 'Controller.class.php');

@@ -28,4 +28,4 @@ class Category {
         return $this->image_url;
     }
     
- ?>
+}

@@ -1,0 +1,1 @@
+<img src="./Images/<?=$prod->getImage_url();?>" alt="">

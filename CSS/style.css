@@ -91,7 +91,7 @@ header div a:hover {
 }
 
 div {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 header div input {
@@ -100,7 +100,7 @@ header div input {
 	background: url('../images/search.png') no-repeat 8px 6px;
     background-color: white;
 	border-radius:15px; 
-    float: right;
+    /*float: right;*/
 	-moz-border-radius:15px; 
 	-webkit-border-radius:15px; 
 }
@@ -113,8 +113,8 @@ aside {
     min-height: 100%;
     padding: 80px 20px;
     background-color: #6699DB;
+    vertical-align: top;
 }
-
 aside .carte {
     background-color: #184177;
     padding: 30px;
@@ -178,4 +178,57 @@ aside .carte li {
 
 .Boite form .Home {
     float: left;
+}
+
+/* case produit */
+
+.conteneur {
+    width: 76%;
+    display: inline-block;
+}
+
+div.produit {
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    background-color: #053566;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: 
+    border-spacing: 5px;
+    height: 280px;
+    min-width: 200px;
+    max-width: 600px;
+    vertical-align: middle;
+}
+
+.produit img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.produit div span {
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.produit div span:first-child{
+    font-size: 1.1em;
+    font-family: Arial;
+}
+
+.produit div span:last-child{
+    font-family: Calibri;
+    color: #184177;
+    vertical-align: bottom;
 }

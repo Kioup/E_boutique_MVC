@@ -57,5 +57,4 @@ class Product {
     public final function getIdCategorie() {
         return $this->id_categorie;
     }
-    
- ?>
+}

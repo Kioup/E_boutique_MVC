@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="fr">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <title>Online Store</title>
@@ -15,17 +15,12 @@
         <a href="">Connexion</a>
         <a href="">Inscription</a>
     </div>
-</header>    
-<aside>
-    <div class="carte">
-        <h2>Categorie</h2>
-        <ul>
-            <li>Jouets</li>
-            <li>Materiel</li>
-            <li>Sports</li>
-        </ul>
-    </div>
-</aside>
+</header>
+<?php
+    if(isset($page) && $page == "product"){
+        require("./View/category.php");
+    }
+?>    
 <body>
 
     <?php

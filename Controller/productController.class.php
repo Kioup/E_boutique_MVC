@@ -8,15 +8,29 @@ class productController {
 
         require('./Model/Product.class.php');
 	require_once('./Model/ProductManager.class.php');
-	$this->userManager = new UserManager($db1);
+	$this->productManager = new ProductManager($db1);
 
-
-	public function addToCart(){
-
-	}
+}
 
 	public function display(){
-		
+		// $pdoBuilder = new Connexion();
+		// $db = $pdoBuilder->get_connection();
+		// $ctrlo = "category";
+		// require_once($ctrlo  . 'Controller.class.php');
+		// $ctrlo = $ctrlo . 'Controller';
+		// $controlleri = new $ctrlo($db);
+		// var_dump($controlleri);
+		// $controlleri->display();
+
+		$page = "product";
+		$prod = $this->productManager->findAll();
+		require("./View/main.php");
+	}
+
+	public function displayOne($id){
+		$page = "productOne";
+		$prod = $this->productManager->findOne($id);
+		require("./View/main.php");
 	}
 
 }

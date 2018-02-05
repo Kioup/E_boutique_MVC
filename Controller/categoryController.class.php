@@ -11,13 +11,13 @@ class categoryController{
 	require_once('./Model/CategoryManager.class.php');
 	$this->categoryManager = new CategoryManager($db1);
 
-        $this->db = $db1 ;
     }
     
 
 	public function display(){
-
-		require('./View/main.php');
+		$page = "product";
+		$cat = $this->categoryManager->findAll();
+		// require('./View/main.php');
 	}
 
 }

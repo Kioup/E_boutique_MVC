@@ -1,5 +1,5 @@
 <?php
-class UserManager {
+class ProductManager {
 	public $db;
     
     public function __construct($db){
@@ -18,6 +18,13 @@ class UserManager {
         $req->setFetchMode( PDO::FETCH_CLASS, "Product");
         $req->execute(array($categorie));
         return $req->fetch(PDO::FETCH_CLASS);
+    }
+
+    public function findAll(){
+        $req = $this->db->prepare("SELECT * FROM Product");
+        $req->setFetchMode( PDO::FETCH_CLASS, 'Product');
+        $req->execute();
+        return $req->fetchAll( PDO::FETCH_CLASS, "Product");
     }
     
 }
