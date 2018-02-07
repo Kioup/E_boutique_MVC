@@ -5,5 +5,5 @@
         <p><?=$prod->getDescription();?></p><br>
         <h3><?=$prod->getPrice();?> €</h3>
     </div>
-    <button>Ajouter au panier</button>
+    <a href="index.php?ctrl=cart&action=update&id=<?=$prod->getId();?>">Ajouter au panier</a>
 </div>

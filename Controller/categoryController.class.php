@@ -13,11 +13,13 @@ class categoryController{
 
     }
     
-
+    
 	public function display(){
-		$page = "product";
+        $pdoBuilder = new Connexion();
+        $db = $pdoBuilder->get_connection();
 		$cat = $this->categoryManager->findAll();
-		// require('./View/main.php');
+        require("./View/category.php");
+
 	}
 
 }

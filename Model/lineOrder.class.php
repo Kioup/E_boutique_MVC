@@ -16,4 +16,4 @@ class lineOrder {
         return $this->quantity;
     } 
     
- ?>
+}

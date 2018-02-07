@@ -58,8 +58,13 @@ header {
     display: block;
     padding: 20px 50px;
     min-height: 100px;
+    position: relative;
     background-color: #2576C5;
     background-image: url("../Images/147857732.jpg");
+}
+
+header > a {
+    text-decoration: none;
 }
 
 header h1 {
@@ -72,9 +77,9 @@ header h1 {
     color: white;
 }
 
-header div a {
+header div a.button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 30px;
     float: right;
     background-color: #184177;
     margin: 0 20px;
@@ -82,16 +87,29 @@ header div a {
     color: white;
     text-decoration: none;
     font-family: Arial;
+    vertical-align: middle;
     font-size: 1.1em;
 }
 
-header div a:hover {
+header div a.button:hover {
     color: #184177;
     background-color: white;
 }
 
 div {
     padding: 20px 0;
+}
+
+header div a.cart {
+    width: 80px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+header div a.cart > img {
+    width: 100%;
 }
 
 header div input {
@@ -183,7 +201,7 @@ aside .carte li {
 /* case produit */
 
 .conteneur {
-    width: 76%;
+    width: 70%;
     display: inline-block;
 }
 

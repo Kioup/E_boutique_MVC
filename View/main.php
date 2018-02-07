@@ -9,18 +9,23 @@
 </head>
     
 <header>
-    <h1>Welcome to home shop</h1>
+    <a href="index.php?ctrl=product&action=display"><h1>Welcome to home shop</h1></a>
     <div>
         <input type="search" placeholder="rechercher...">
-        <a href="">Connexion</a>
-        <a href="">Inscription</a>
+        <a href="index.php?ctrl=cart&action=removeProduct" class="cart"><img src="Images/bg-hp-img02.png" alt=""></a>
+        <a href="" class="button">Connexion</a>
+        <a href="" class="button">Inscription</a>
     </div>
 </header>
 <?php
     if(isset($page) && $page == "product"){
-        require("./View/category.php");
+        require_once('Controller/categoryController.class.php');
+         $controlleri = new categoryController($db);
+		 $controlleri->display();
+        
     }
-?>    
+?><!--
+-->    
 <body>
 
     <?php

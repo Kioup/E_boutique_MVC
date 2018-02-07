@@ -2,8 +2,8 @@
     <div class="carte">
         <h2>Categorie</h2>
         <ul>
-		<?php foreach($cat as $categorie){ ?>
-            <li><?=$categorie->getName()?></li>
+		<?php for($i=0; $i<count($cat);$i++){ ?>
+            <li><? echo $cat[$i]->getName();?></li>
         <?php } ?>
         </ul>
     </div>

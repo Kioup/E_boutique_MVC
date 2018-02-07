@@ -7,10 +7,10 @@ class CategoryManager {
     }
     
     public function findAll(){
-        $req = $this->db->prepare("SELECT * FROM Categorie");
-        $req->setFetchMode( PDO::FETCH_CLASS, 'Categorie');
+        $req = $this->db->prepare("SELECT * FROM Category");
+        $req->setFetchMode( PDO::FETCH_CLASS, 'Category');
         $req->execute();
-        return $req->fetchAll( PDO::FETCH_CLASS, "Categorie");
+        return $req->fetchAll( PDO::FETCH_CLASS, "Category");
     }
     
 }

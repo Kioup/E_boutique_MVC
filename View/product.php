@@ -7,11 +7,9 @@ foreach($prod as $produit){
 <div class="produit">
 	<img src="./Images/<?=$produit->getImage_url();?>" alt="">
 	<div>
-		<span><?=utf8_decode($produit->getName());?></span>
-		<span><?=utf8_decode($produit->getPrice());?> €</span>
-	</div>
-</div>
-</a>
+		<span><?=$produit->getName();?></span>
+		<span><?=$produit->getPrice();?> €</span>
+	</div></div></a>
 
 <?php	
 }

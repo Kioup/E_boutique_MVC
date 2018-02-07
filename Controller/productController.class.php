@@ -5,7 +5,7 @@ class productController {
 	private $product;
 
     public function __construct($db1) {
-
+    
         require('./Model/Product.class.php');
 	require_once('./Model/ProductManager.class.php');
 	$this->productManager = new ProductManager($db1);
@@ -13,14 +13,8 @@ class productController {
 }
 
 	public function display(){
-		// $pdoBuilder = new Connexion();
-		// $db = $pdoBuilder->get_connection();
-		// $ctrlo = "category";
-		// require_once($ctrlo  . 'Controller.class.php');
-		// $ctrlo = $ctrlo . 'Controller';
-		// $controlleri = new $ctrlo($db);
-		// var_dump($controlleri);
-		// $controlleri->display();
+		 $pdoBuilder = new Connexion();
+		 $db = $pdoBuilder->get_connection();
 
 		$page = "product";
 		$prod = $this->productManager->findAll();
