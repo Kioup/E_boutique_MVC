@@ -2,7 +2,6 @@
 class cartController {
     
     private $lineOrder;
-    private $item = [ ];
     private $id_order = 0;
 
 //    private $productManager;
@@ -20,14 +19,11 @@ class cartController {
 	}
 
 	public function update($id, $quant = 1){
-        $id_product = $id;
-        $order = $this->id_order++;
-        $this->item[$this->id_order] = $this->productManager->findOne($id_product);
-        $item = $this->item[$this->id_order];
-        $quantity = $quant;
-        
-        $_SESSION["panier"] = $item;
-        $_SESSION["quantity"] = $quantity;
+        $_SESSION["nombre"]++;
+        $nb = $_SESSION["nombre"];
+        $panier = $_SESSION["panier"];
+        $panier[$nb] = $id;
+        $_SESSION["panier"] = $panier;
         $page = "panier";
         require("./View/main.php");
 	}

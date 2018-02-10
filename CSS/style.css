@@ -250,3 +250,52 @@ div.produit {
     color: #184177;
     vertical-align: bottom;
 }
+
+/* case productOne */
+
+.fiche {
+    width: 70%;
+    background-color: #053566;
+    margin: 100px auto;
+    padding: 10px;
+}
+
+.fiche > img {
+    display: inline-block;
+    width: 40%;
+    margin-right: 50px;
+    margin-bottom: 15px;
+}
+
+.fiche > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+
+.fiche > div > h3 {
+    font-size: 1.5em;
+    text-align : center;
+    color: white;
+    margin-bottom: 15px;
+    font-family: Arial;
+}
+
+.fiche > div > p {
+    background-color: white;
+    font-family: Arial;
+    padding: 20px;
+}
+
+.fiche > a {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #184177;
+    color: white;
+    font-family: Arial;
+    font-size: 1.2em;
+}

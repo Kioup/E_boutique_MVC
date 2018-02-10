@@ -1,13 +1,17 @@
 <?php
-var_dump($_SESSION["panier"]);
+echo "session panier : "; var_dump($_SESSION["panier"]);
+echo "session nombre : "; var_dump($_SESSION['nombre']);
 if (!empty($_SESSION['panier'])) {
     $item = $_SESSION['panier'];
 
-    foreach($item as $it) { ?>
+    foreach($item as $it) { 
+    $obj = $this->productManager->findOne($it);
+        ?>
 
         <div>
-            <img src="./Images/<?=$it->getImage_url();?>" alt="">
-            <span>Prix : <?=$it->getPrice() * $quantity;?></span>
+            <img src="./Images/<?=$obj->getImage_url();?>" alt="">
+            <span><?=$obj->getName();?></span>
+            <span>Prix : <?=$obj->getPrice() * $quantity;?></span>
             <form>
             <label for="quantite">Quantité : </label>
             <select id="quantite" name="quantite">

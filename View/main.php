@@ -32,6 +32,8 @@
         session_start();
         if(isset($_SESSION['user'])){                
             $user = $_SESSION["user"];
+            $_SESSION["panier"] = array();
+            $_SESSION["nombre"];
         }
     
         echo $info;
