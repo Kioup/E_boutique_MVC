@@ -30,13 +30,13 @@
 
     <?php
         session_start();
-        if(isset($_SESSION['user'])){                
-            $user = $_SESSION["user"];
+        // if(isset($_SESSION['user'])){                
+            // $user = $_SESSION["user"];
             $_SESSION["panier"] = array();
             $_SESSION["nombre"];
-        }
+        // }
     
-        echo $info;
+        // echo $info;
         if(isset($page)){
             require("./View/".$page.".php");
         }

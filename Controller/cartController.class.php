@@ -23,8 +23,6 @@ class cartController {
         $nb = $_SESSION["nombre"];
         $panier = $_SESSION["panier"];
         $panier[$nb] = $id;
-        $_SESSION["panier"] = $panier;
-        $page = "panier";
         require("./View/main.php");
 	}
 
