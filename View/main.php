@@ -12,9 +12,14 @@
     <a href="index.php?ctrl=product&action=display"><h1>Welcome to home shop</h1></a>
     <div>
         <input type="search" placeholder="rechercher...">
-        <a href="index.php?ctrl=cart&action=removeProduct" class="cart"><img src="Images/bg-hp-img02.png" alt=""></a>
-        <a href="" class="button">Connexion</a>
-        <a href="" class="button">Inscription</a>
+        <a href="index.php?ctrl=cart&action=affiche" class="cart"><img src="Images/bg-hp-img02.png" alt=""></a>
+        <?php if(!empty($_SESSION["user"])){ ?>
+            <span>Bienvenu <?//=$_SESSION["user"]->getFirstName();?></span>
+            <a href="index.php?ctrl=user&action=delog" class="button">Déconnexion</a>
+        <?php } else { ?>
+            <a href="index.php?ctrl=user&action=login" class="button">Connexion</a>
+            <a href="" class="button">Inscription</a>
+        <?php } ?>
     </div>
 </header>
 <?php
@@ -29,35 +34,11 @@
 <body>
 
     <?php
-        session_start();
-        // if(isset($_SESSION['user'])){                
-            // $user = $_SESSION["user"];
-            $_SESSION["panier"] = array();
-            $_SESSION["nombre"];
-        // }
-    
-        // echo $info;
+        echo $info;
         if(isset($page)){
             require("./View/".$page.".php");
         }
         else {        
-        ?>
-    
-        
-<!--
-        <div class="Boite">
-            <h2>Page Accueil</h2>
-            <form>
-            <p><a href=<? php // if(isset($_SESSION['user'])){ // echo 'index.php?ctrl=user&action=doLogin';
-         // }else { echo 'index.php?ctrl=user&action=login';}?>>Connexion</a> ou <a href="#">Inscription</a></p>
-                <p class="Home"><a href="index.php">Accueil</a></p>
-            <p><strong>TP Authentification et réseaux</strong></p>
-            <p><a href="#">Gestion des utilisateurs</a></p>
-            <p class="Home">Message</p>
-            </form> 
-        </div>
--->
-    <?php
         }
     ?>
     

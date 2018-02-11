@@ -13,21 +13,43 @@ class cartController {
         $this->productManager = new ProductManager($db);
     }
 
-	public function removeProduct(){
+	public function removeProduct($id){
+        unset($_SESSION["panier"][$id]);
+        $array = array_values($_SESSION["panier"]);
         $page = "panier";
         require("./View/main.php");
 	}
 
-	public function update($id, $quant = 1){
-        $_SESSION["nombre"]++;
-        $nb = $_SESSION["nombre"];
-        $panier = $_SESSION["panier"];
-        $panier[$nb] = $id;
+	public function update($id){
+        if (!empty($_POST["quantite"])){
+            $quantity = $_POST["quantite"];
+        }
+        else {
+            $quantity = 1;
+        }
+
+        if (empty($_SESSION["panier"])){
+            $_SESSION["panier"] = array();
+        }
+
+        if (in_array($id, $_SESSION["panier"])){
+            $quantity++;
+        }
+        else {
+            array_push($_SESSION["panier"], $id);
+        }
+        $page = "panier";
         require("./View/main.php");
 	}
 
 	public function remove($item){
 		
 	}
+
+    public function affiche() {
+        $page = "panier";
+        require("./View/main.php");
+    }
+
 
 }

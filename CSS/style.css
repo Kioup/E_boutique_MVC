@@ -161,20 +161,21 @@ aside .carte li {
 
 .Boite {
     width: 800px;
-    margin: auto;
+    margin: 150px auto;
     vertical-align: middle;
     height: auto;
-    border: black 2px dashed;
+    border-radius: 10px;
+    background-color: #cecece;
 }
 
 .Boite h2 {
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: #053566;
     text-align: center;
     font-family: Arial;
     font-size: 1.2em;
     padding: 10px 0;
-    color: black;
+    color: white;
 }
 
 .Boite p {
@@ -189,13 +190,13 @@ aside .carte li {
     margin-bottom: 20px;
 }
 
-.Boite strong {
-    font-weight: bold;
-    margin: 10px 0;
-}
+.Boite form div label {
 
-.Boite form .Home {
-    float: left;
+    background-color: #053566;
+    padding: 5px 10px;
+    color: white;
+    font-family: Arial;
+
 }
 
 /* case produit */
@@ -299,3 +300,46 @@ div.produit {
     font-family: Arial;
     font-size: 1.2em;
 }
+
+table.bark {
+
+    margin: 150px auto;
+    width: 90%;
+
+}
+
+table.bark th {
+    color: white;
+    font-family: Arial;
+    border-spacing: 3px;
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #053566;
+}
+
+table.bark tr {
+    width: 100%;
+    background-color: #cecece;
+    border-bottom: solid 10px gray;
+}
+
+table.bark tr td {
+    /*border-right: solid 2px gray;*/
+    text-align: center;
+    font-family: Arial;
+    font-family: 1.1em;
+    vertical-align: middle;
+}
+
+table.bark tr td:first-child img{
+
+    width: 120px;
+
+}
+
+/*table.bark tr td:last-child {
+
+    width : 8%;
+
+}*/

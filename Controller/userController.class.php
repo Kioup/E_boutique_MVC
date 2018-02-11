@@ -29,6 +29,15 @@ class userController {
         require('./View/main.php');
     }
 
+    public function delog(){
+        if(!empty($_SESSION["user"])){
+            unset($_SESSION['user']);
+        }
+        $page = "product";
+        $ctrl = new productController($this->db);
+        require('./View/main.php');
+    }
+
 
     public function doLogin() {
 
@@ -42,6 +51,8 @@ class userController {
         $req->bindParam(":email", $_POST['email']);
         $req->bindParam(":password", $_POST['password']);
         $req->execute();
+
+        // echo "email : ".$_POST['email']." et mdp : ".$_POST['password'];
         
         if($req->rowCount() > 0){
             
@@ -57,10 +68,8 @@ class userController {
     	if ( $result ) :
 			$info = "Connexion reussie";
 			$_SESSION['user'] = $user;
-			$page = 'Home';
-
+            $page = "product";
     	else :
-
     		$info = "Identifiants incorrects.";
             $page = "login";
     	endif;
